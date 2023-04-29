@@ -1,0 +1,88 @@
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="icon" type="image/png" href="/2.png" />
+  <!-- For apple devices -->
+  <link rel="apple-touch-icon" type="image/png" href="/2.png" />
+
+<body>
+  <div class="page">
+    <div class="nav">
+      <div class="nav_logo"></div>
+      {%if user.is_authenticated%}
+      <div class="dropdown">
+        <div class="nav_user_logo">
+          <img class="am" src="/user.png" alt="">
+        </div>
+        <div class="dropdown-content">
+          <a href="{%url 'user_profile'%}">account</a>
+          <a href="{% url 'del_user' %}">logout</a>
+          <a href="#">delete account</a>
+        </div>
+      </div>
+      
+      {%else %}
+      <div class="nav_button">
+        <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+        <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+      </div>
+      {%endif%}
+    </div>
+    <div class="home_page_1 bg2">
+      <div class="home_page_1_content">
+        <center>
+          <div class="home_page_1_timer">
+            <h3>Time Left for exam:</h3>
+            <p id="demo"></p>
+            <h3>you can give trial exam</h3>
+            <div class="home_page_1_d_button">
+              <input type="button" value="trial">
+            </div>
+            <h3>Or you can set notification </h3>
+            <div class="home_page_1_d_button">
+              <a href="http://127.0.0.1:5500/new%20home/home_n.html#notifiaction">
+                <input type="button" value="notification">
+              </a>
+            </div>
+            <script>
+              var countDownDate = new Date("2 10 3000 21:0:0").getTime();
+              var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+              }, 1000);
+            </script>
+          </div>
+        </center>
+      </div>
+    </div>
+    
+    <div class="navigation_area " id="about">
+      <ul>
+        <li><a href="{% url 'ourinfo' %}">contact us</a></li>
+        <li><a href="{% static 'main.css' %}">T&C</a></li>       
+      </ul>
+      <ul>
+        <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+        <li><a href="{% url 'user_profile' %}"> account</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% url 'del_user' %}">delete account</a></li>
+        <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

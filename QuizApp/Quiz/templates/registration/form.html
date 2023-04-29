@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-4">
+        <h3 class="register my-4">Register</h3>
+        <form method="post" action="">
+            <table class="table table-bordered">
+                {%csrf_token%}
+                {{form.as_table}}
+                <tr>
+                    <td colspan="2"><input type="submit"/></td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>

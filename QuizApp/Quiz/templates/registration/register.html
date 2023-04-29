@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WELLCOME</title>
+  <link rel="stylesheet" href="{% static 'register.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="icon" type="image/png" href="{% static '2.png' %}" />
+  <link rel="apple-touch-icon" type="image/png" href="{% static '2.png' %}" />
+
+</head>
+
+<body>
+  <div class="page">
+    <div class="nav">
+      <div class="nav_logo"></div>
+      {%if user.is_authenticated%}
+      <div class="nav_button">
+        <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+        <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+      </div>
+      {%else %}
+      <div class="dropdown">
+        <div class="nav_user_logo">
+          <img class="am" src="/user.png" alt="">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">account</a>
+          <a href="#">logout</a>
+          <a href="#">delete account</a>
+        </div>
+      </div>
+      {%endif%}
+    </div>
+    <div class="signin_page bg4">
+
+      <div class="signin_box_form w">
+        <div class="signin_box_logo">
+          <center>
+            signin
+          </center>
+        </div>
+        
+        <form action="" method="post" name="signin" >
+          {% csrf_token %}
+          <input type="text" name="first_name" id="signin_f_name" placeholder="First Name:" required="required"
+            value="" />
+          <br>
+          <input type="text" name="last_name" id="signin_l_name" placeholder="Last Name:" value=""
+            required="required" />
+          <br />
+          <input type="text" name="username"  placeholder="Username:" required="required"
+            value="" />
+          <br>
+          <input type="email" name="email" id="email" placeholder="Email :" value="" required="required" />
+          <br />
+          <input type="text" name="it_code" placeholder="Institution code:" id="" required="required"/>
+          <br />
+          <input type="password" name="password" placeholder="Password:" id="" required="required" />
+          <br>
+          <center>
+            <input type="checkbox" name="t&C" id="" required="required"> <label for="t&C">Terms and Conditions</label>
+          </center>
+          <a href="#"><input type="submit" value="Register" /></a>
+        </form>
+
+        <center>
+          Already have an account? <a href="http://127.0.0.1:26262/log%20in/login.html"> Login</a>
+        </center>
+
+      </div>
+    </div>
+    <div class="navigation_area " id="about">
+      <ul>
+        <li><a href="{% static 'admin.html' %}">contact us</a></li>
+        <li><a href="{% static 'main.css' %}">T&C</a></li>
+       
+      </ul>
+      <ul>
+
+        <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+        <li><a href="{% static 'user.html' %}"> account</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% static 'delete.html' %}">delete account</a></li>
+       
+        <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

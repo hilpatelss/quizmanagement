@@ -1,0 +1,94 @@
+{%load static%}
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'quiz.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="icon" type="image/png" href="/2.png" />
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="nav_logo"></div>
+            {%if user.is_authenticated%}
+            <div class="nav_button">
+                <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+                <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+            </div>
+            {%else %}
+            <div class="dropdown">
+                <div class="nav_user_logo">
+                    <img class="am" src="/user.png" alt="">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">account</a>
+                    <a href="#">logout</a>
+                    <a href="#">delete account</a>
+                </div>
+            </div>
+            {%endif%}
+        </div>
+
+        <div class="quiz_page ">
+            <form method="post" action="{% url 'submit_answer' question.id %}">
+                {% csrf_token %}
+                <div class="quiz_paper">
+
+                    <div class="quiz_form">
+                        <div class="quiz_qustion">
+                            {{question.question}}
+                        </div>
+
+                        <ol>
+                            <li><input type="radio" name="answer" value="{{question.opt_1}}"><label
+                                    for="opt_1">{{question.opt_1}}</label></li>
+                            <li><input type="radio" name="answer" value="{{question.opt_2}}"><label
+                                    for="opt_2">{{question.opt_2}}</label></li>
+                            <li><input type="radio" name="answer" value="{{question.opt_3}}"><label
+                                    for="opt_3">{{question.opt_3}}</label></li>
+                            <li><input type="radio" name="answer" value="{{question.opt_4}}"><label
+                                    for="opt_4">{{question.opt_4}}</label></li>
+                        </ol>
+                        <input class="b1" type="submit" name='skip' value="skip">
+                        <input class="b2" type="submit" name='next' value="next">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="navigation_area " id="about">
+            <ul>
+                <li><a href="{% static 'admin.html' %}">contact us</a></li>
+                <li><a href="{% static 'main.css' %}">T&C</a></li>
+
+            </ul>
+            <ul>
+
+                <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+                <li><a href="{% static 'user.html' %}"> account</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% static 'delete.html' %}">delete account</a></li>
+
+                <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="{% static 'jquery-3.6.4.min.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".b2").on('click', function () {
+            var _checkedAns = $("input[name= 'answer']:checked").val();
+            if (_checkedAns == undefined) {
+                alert('Please select option!!');
+                return false;
+            };
+        })
+    });
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'edit.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="icon" type="image/png" href="/2.png" />
+</head>
+
+<body>
+
+<div class="page">
+  <div class="nav">
+    <div class="nav_logo"></div>
+    {%if user.is_authenticated%}
+    <div class="nav_button">
+      <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+      <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+    </div>
+    {%else %}
+    <div class="dropdown">
+      <div class="nav_user_logo">
+        <img class="am" src="/user.png" alt="">
+      </div>
+      <div class="dropdown-content">
+        <a href="#">account</a>
+        <a href="#">logout</a>
+        <a href="#">delete account</a>
+      </div>
+    </div>
+    {%endif%}
+  </div>
+  <div class="edit_page bg3">
+
+    <div class="edit_box_form w">
+      <div class="edit_box_logo">
+        <center>
+          Edit
+        </center>
+      </div>
+      <form action="" method="post" name="signin">
+        <label for="first_name">First name:</label>
+        <input type="text" name="first_name" id="edit_f_name" value="" />
+        <br />
+        <label for=" first_name">Last name:</label>
+        <input type="text" name="last_name" id="edit_l_name" value="" />
+        <br />
+        <label for="first_name">Phone no:</label>
+        <input type="tel" name="telphone" value="" required pattern="[0-9]{10}" />
+        <br />
+        <label for="first_name">Email:</label>
+        <input type="email" name="email" id="email" value="" />
+        <br />
+        <label for="first_name">institution code:</label>
+        <input type="text" name="it_code" id="email" value="" />
+        <br />
+        <a href="">
+          <input type="submit" value="SAVE" />
+        </a>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="navigation_area " id="about">
+    <ul>
+      <li><a href="{% static 'admin.html' %}">contact us</a></li>
+      <li><a href="{% static 'main.css' %}">T&C</a></li>
+     
+    </ul>
+    <ul>
+
+      <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+      <li><a href="{% static 'user.html' %}"> account</a></li>
+    </ul>
+    <ul>
+      <li><a href="{% static 'delete.html' %}">delete account</a></li>
+     
+      <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+
+</html>

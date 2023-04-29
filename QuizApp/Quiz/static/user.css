@@ -1,0 +1,128 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+
+
+.user_page {  
+  height: 100vh;
+  width: 100%;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(roberto-nickson-vZ1JAXUO3-0-unsplash.jpg);
+}
+.user_box {
+  height: 390px;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.253);
+  align-content: center;
+  margin: 25vh auto;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.user_box_img_part {
+  height: 80px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  border-bottom: black;
+
+}
+
+.user_box_img_desing_part {
+  margin: 20px auto;
+  border: 1px solid transparent;
+  height: 100px;
+  width: 100px;
+}
+
+.user_box_img_round_desing {
+  height: 100px;
+  width: 100px;
+
+  border-radius: 50%;
+  background-image: linear-gradient(135deg,
+      #feed07 0%,
+      #fe6a50 5%,
+      #ed00aa 15%,
+      #2fe3fe 50%,
+      #8900ff 100%);
+  animation: user_box_img_round_animatiom 4s infinite linear;
+  position: absolute;
+}
+
+@keyframes user_box_img_round_animatiom {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.user_box_img_round {
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  margin: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  background-image: url(user.png);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+
+.user_info_edit {
+  height: 20px;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: white;
+
+}
+.user_info_box pre{
+  margin: 15px 0 0 0; 
+}
+
+
+
+.user_info_edit_button {
+  height: 20px;
+  width: 20px;
+  border: 1px solid transparent;
+  float: right;
+  margin: 5px 6px;
+}
+
+.user_info_box {
+  width: 100%;
+  height: 300px;
+  padding: 10% 5%;
+  background-color: white;
+  border: 1px solid transparent;
+  color: black;
+}
+
+.info_box_fix_text {
+  color: black;
+  font-size: large;
+}
+
+.info_box_d_text {
+  font-size: large;
+  border-bottom: 1px solid black;
+  color: rgb(0, 0, 0);
+}

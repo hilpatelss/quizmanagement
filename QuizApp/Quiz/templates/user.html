@@ -1,0 +1,82 @@
+{%load static%}
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'user.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="icon" type="image/png" href="/2.png" />
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="nav_logo"></div>
+            {%if user.is_authenticated%}
+            <div class="nav_button">
+              <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+              <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+            </div>
+            {%else %}
+            <div class="dropdown">
+              <div class="nav_user_logo">
+                <img class="am" src="/user.png" alt="">
+              </div>
+              <div class="dropdown-content">
+                <a href="#">account</a>
+                <a href="#">logout</a>
+                <a href="#">delete account</a>
+              </div>
+            </div>
+            {%endif%}
+          </div>
+        <div class="user_page bg4">
+            <div class="user_box">
+                <div class="user_box_img_part">
+                    <div class="user_box_img_desing_part">
+                        <a href=""><!-- link that direct to edit page of image edit-->
+                            <div class="user_box_img_round_desing"></div>
+                            <div class="user_box_img_round"></div>
+                            <!--- dynamec image tag for user img -->
+                        </a>
+                    </div>
+                </div>
+                <div class="user_info_edit">
+                    <a href=""><!--link for edit page -->
+                        <div class="user_info_edit_button"><img src="/user page/img/R.png" height="20px" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="user_info_box">
+                    <pre><span class="info_box_fix_text">Name: {{user.first_name}} {{user.last_name}}           </span><span class="info_box_d_text"><!--dynamic text--></span></pre>
+                    <pre><span class="info_box_fix_text">Username: {{user.username}}       </span><span class="info_box_d_text"><!--dynamic text--></span></pre>
+                    <pre><span class="info_box_fix_text">Email: {{user.email}}           </span><span class="info_box_d_text"><!--dynamic text--></span></pre>
+                    <pre><span class="info_box_fix_text">Score: {{score.percentage}}           </span><span class="info_box_d_text"><!--dynamic text--></span></pre>
+                    <pre><span class="info_box_fix_text">Password:         </span><a href="#"><!--link for change password with login page --><span class="info_box_d_text">************</span></a></pre>
+                    <pre><span class="info_box_fix_text">Institution code: {{user.inst_code}} </span><a href="#"><!--link for change password with login page --><span class="info_box_d_text"><!--dynamic text--></span></a></pre>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="navigation_area " id="about">
+            <ul>
+              <li><a href="{% static 'admin.html' %}">contact us</a></li>
+              <li><a href="{% static 'main.css' %}">T&C</a></li>
+             
+            </ul>
+            <ul>
+      
+              <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+              <li><a href="{% static 'user.html' %}"> account</a></li>
+            </ul>
+            <ul>
+              <li><a href="{% static 'delete.html' %}">delete account</a></li>
+             
+              <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+            </ul>
+          </div>
+    </div>
+    
+</body>
+
+</html>

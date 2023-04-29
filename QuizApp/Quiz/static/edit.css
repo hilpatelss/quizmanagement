@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: large;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+.edit_page {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(110, 200, 203, 0.487);
+  justify-content: center;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.554),rgba(0, 0, 0, 0.808)),url(eduardo-casajus-gorostiaga-aWUUEIJaSRw-unsplash.jpg);
+}
+
+
+.edit_box_logo{
+  padding: 15px;
+  font-size: xx-large;
+  border-bottom: 1px solid black;
+}
+.edit_box_form {
+  height: 400px;
+
+  margin: 20vh auto;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px,
+    rgba(0, 0, 0, 0.32) 0px 15px 12px;
+
+  position: relative;
+}
+
+.edit_box {
+  height: 100%;
+  width: 40%;
+}
+
+.edit_box_form form {
+  margin: 10px 20px;
+  justify-content: center;
+}
+
+.edit_box_form input label {
+  width: 100%;
+  margin: 5px 10px;
+}
+
+.edit_box_form input[type="email"],input[type="tel"],input[type="text"],input[type="password"] {
+  font: caption;
+  
+  margin: 0px 0px 10px 0px;
+  outline: none;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.edit_box_form input[type="radio"] {
+margin: 10px 0 ;
+}
+
+.edit_box_form input[type="submit"] {
+  margin: 20px 0px 10px 0px;
+  background-color: transparent;
+  font: caption;
+  padding: 8px 7px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 2px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.edit_box_form input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 5px;
+  fo
+}
+
+.edit_box_form input[type="email"]:hover,input[type="tel"]:hover,input[type="text"]:hover,input[type="password"]:hover,input[type="date"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input[type="text"]:focus,input[type="password"]:focus {
+  border-bottom: 2px solid black;
+}

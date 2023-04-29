@@ -1,0 +1,104 @@
+{%load static%}
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'admin.css' %}" />
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="icon" type="image/png" href="/2.png" />
+</head>
+
+<body>
+  <div class="page">
+    <div class="nav">
+      <div class="nav_logo"></div>
+      {%if user.is_authenticated%}
+      <div class="nav_button">
+        <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+        <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+      </div>
+      {%else %}
+      <div class="dropdown">
+        <div class="nav_user_logo">
+          <img class="am" src="/user.png" alt="">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">account</a>
+          <a href="#">logout</a>
+          <a href="#">delete account</a>
+        </div>
+      </div>
+      {%endif%}
+    </div>
+    <div class="admin_page bg5">
+      <div class="admin_part">
+        <div class="admin_box">
+          <div class="admin_box_img_part">
+            <div class="admin_box_img_desing_part">
+              <div class="admin_box_img_round_desing"></div>
+              <div class="admin_box_img_round"></div>
+            </div>
+          </div>
+          <div class="admin_box_info">
+            <div class="admin_box_info_text">
+              name:- hil <br />
+              <br />
+              age:- 20 <br /><br />
+              gender:- male
+            </div>
+          </div>
+        </div>
+        <div class="admin_box">
+          <div class="admin_box_img_part">
+            <div class="admin_box_img_desing_part">
+              <div class="admin_box_img_round_desing"></div>
+              <div class="admin_box_img_round"></div>
+            </div>
+          </div>
+          <div class="admin_box_info">
+            <div class="admin_box_info_text">
+              name:- hil <br />
+              <br />
+              age:- 20 <br /><br />
+              gender:- male
+            </div>
+          </div>
+        </div>
+        <div class="admin_box">
+          <div class="admin_box_img_part">
+            <div class="admin_box_img_desing_part">
+              <div class="admin_box_img_round_desing"></div>
+              <div class="admin_box_img_round"></div>
+            </div>
+          </div>
+          <div class="admin_box_info">
+            <div class="admin_box_info_text">
+              name:- hil <br />
+              <br />
+              age:- 20 <br /><br />
+              gender:- male
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation_area " id="about">
+      <ul>
+        <li><a href="{% static 'admin.html' %}">contact us</a></li>
+        <li><a href="{% static 'main.css' %}">T&C</a></li>
+       
+      </ul>
+      <ul>
+
+        <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+        <li><a href="{% static 'user.html' %}"> account</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% static 'delete.html' %}">delete account</a></li>
+       
+        <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

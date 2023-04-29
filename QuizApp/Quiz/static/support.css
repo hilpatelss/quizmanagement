@@ -1,0 +1,25 @@
+*{
+  margin: 0px;
+  padding: 0%;
+}
+.support_page {
+  height: 94vh;
+  width: 100%;
+  border: 1px solid black;
+  justify-content: center;
+}
+.support_part {
+  height: 400px;  
+  background-color: white;
+  justify-content: center; 
+  margin: 20vh auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 2px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+}
+.support_message {
+  height: 150px;
+  width: 100%;
+  margin: 40px 0 0 0;
+}

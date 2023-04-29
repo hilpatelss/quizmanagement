@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <link rel="stylesheet" href="{% static 'forget.css' %}" />
+  <link rel="icon" type="image/png" href="/2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/2.png" />
+</head>
+
+<body>
+  <div class="page">
+    <div class="nav">
+      <div class="nav_logo"></div>
+      {%if user.is_authenticated%}
+      <div class="nav_button">
+        <a href="{%url 'login'%}"><input type="button" value="singin"></a>
+        <a href="{%url 'Register'%}"><input type="button" value="singup"></a>
+      </div>
+      {%else %}
+      <div class="dropdown">
+        <div class="nav_user_logo">
+          <img class="am" src="/user.png" alt="">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">account</a>
+          <a href="#">logout</a>
+          <a href="#">delete account</a>
+        </div>
+      </div>
+      {%endif%}
+    </div>
+  
+    <div class="forget_page bg3">
+      
+
+      <div class="forget_box_form w">
+        <div class="forget_box_logo">
+          <center>
+            forget
+          </center>
+        </div>
+        <form action="" method="post" name="forget">
+          <input type="email" name="forget_email" placeholder="Email" />
+          <input type="submit" value="forget" />
+        </form>
+
+        <center>
+          <a href="">for registaion</a>
+        </center>
+
+
+      </div>
+    </div>
+    <div class="navigation_area " id="about">
+      <ul>
+        <li><a href="{% static 'admin.html' %}">contact us</a></li>
+        <li><a href="{% static 'main.css' %}">T&C</a></li>
+       
+      </ul>
+      <ul>
+
+        <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+        <li><a href="{% static 'user.html' %}"> account</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% static 'delete.html' %}">delete account</a></li>
+       
+        <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

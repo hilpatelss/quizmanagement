@@ -1,0 +1,62 @@
+{% load static %}
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <link rel="icon" type="image/png" href="/2.png" />
+  <link rel="icon" type="image/png" href="{% static '2.png' %}" />
+  <link rel="apple-touch-icon" type="image/png" href="{% static '2.png' %}" />
+</head>
+
+<body>
+  <div class="page">
+    <div class="login_page bg3">
+
+      <div class="login_box_form w">
+        <div class="login_box_logo">
+          <center>
+            login
+          </center>
+        </div>
+        <form action="" method="post"  >
+          {% csrf_token %}
+          <input type="text" class="username" name="username" placeholder="Username" />
+          <input type="password" name="password" placeholder="Password" />
+          <center>
+            <a href="#">Forget password</a>
+          </center>
+          <input type="submit" value="LOG IN" />
+        </form>
+
+        <center>
+          <a href="{%url 'Register'%}">for registaion</a>
+        </center>
+
+
+      </div>
+    </div>
+    <div class="navigation_area " id="about">
+      <ul>
+        <li><a href="{% static 'admin.html' %}">contact us</a></li>
+        <li><a href="{% static 'main.css' %}">T&C</a></li>
+       
+      </ul>
+      <ul>
+
+        <li><a href="{% static 'reset.html' %}"> reset password</a></li>
+        <li><a href="{% static 'user.html' %}"> account</a></li>
+      </ul>
+      <ul>
+        <li><a href="{% static 'delete.html' %}">delete account</a></li>
+       
+        <li><a href="{% static 'home.html' %}"> notifiaction</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
+
+

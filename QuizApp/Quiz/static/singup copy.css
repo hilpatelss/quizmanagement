@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+a:link {
+  text-decoration: none;
+}
+body {
+  font-size: large;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.no-outline:focus {
+  outline: none;
+}
+.singup_page {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5)),url(jeremy-brady-vK26p2SFX3E-unsplash.jpg);
+  background-attachment: fixed;
+}
+
+.singup_box_form {
+  height: 520px;
+  margin: 20vh auto;
+  padding: 1vh;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px,
+    rgba(0, 0, 0, 0.32) 0px 15px 12px;
+  position: relative;
+}
+
+.singup_box {
+  height: 100%;
+  width: 40%;
+}
+
+.singup_box_form form {
+  margin: 20px 20px;
+  justify-content: center;
+}
+
+.singup_box_form input label {
+  width: 100%;
+  margin: 20px 10px;
+}
+
+.singup_box_form input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"] {
+  
+  margin: 0px 0px 10px 0px;
+  outline: none;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: relative;
+}
+.singup_box_form input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"] {
+  margin: 8px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+.singup_box_logo {
+  padding: 15px;
+  font-size: xx-large;
+  border-bottom: 1px solid black;
+}
+
+.singup_box_form input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  margin: 10px 0;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  letter-spacing: 1px;
+  font-size: large;
+}
+
+.singup_box_form input[type="radio"]:nth-child(1) {
+  margin: 20px 0px 10px 20px;
+}
+
+.singup_box_form input[type="submit"] {
+  margin: 10px 0px 10px 0px;
+  background-color: transparent;
+  font-size: large;
+  padding: 8px 7px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 2px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.singup_box_form input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 5px;
+}
+
+.singup_box_form input[type="date"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 3px solid;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: blue;
+}
+.login_box_or_form {
+  font-size: medium;
+  margin: 20px 20px;
+  border-top: 1px solid black;
+}
+.login_box_or_form center {
+  overflow: visible;
+  border: 1px solid transparent;
+  margin: -12px 0 0 0;
+}
+.login_box_or_form span {
+  background-color: white;
+  padding: 3px;
+}
+.login_box_or_form input[type="button"] {
+  margin: 10px 0px 10px 0px;
+  background-color: transparent;
+  font: caption;
+  padding: 8px 7px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 2px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+.login_box_or_form input[type="button"]:hover {
+  letter-spacing: 0.5px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 5px;
+}

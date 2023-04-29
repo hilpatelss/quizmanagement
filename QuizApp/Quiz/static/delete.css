@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: large;
+}
+
+.delete_page {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.delete_part {
+  width: 370px;
+  height: 100%;
+  margin: auto;
+  border: 1px solid black;
+}
+.delete_box_logo{
+  padding: 15px;
+  font-size: xx-large;
+  border-bottom: 1px solid black;
+}
+.delete_part h4 {
+  margin: 0 0 0 20px;
+  font-weight: 300;
+}
+.delete_box_form {
+  height: 280px;
+  margin: 25vh auto ;
+  padding: 10px ;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px,
+    rgba(0, 0, 0, 0.32) 0px 15px 12px;
+ 
+  position: relative;
+}
+.delete_box_form form {
+  
+  margin: 10px 20px;
+  justify-content: center;
+}
+.delete_box_form input label {
+  width: 100%;
+  margin: 5px 10px;
+}
+.delete_box_form input[type="email"],
+input[type="password"], input[type="checkbox"] {
+  margin: 10px 0px 10px 0px;
+  outline: none;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.delete_box_form input[type="submit"] {
+  margin: 30px 0px 10px 0px;
+  background-color: transparent;
+  font: caption;
+  padding: 8px 7px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 2px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+.delete_box_form input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 5px;
+}
+.delete_box_form input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus {
+  border-bottom: 2.5px solid black;
+}
+.delete2_page {
+  height: 93vh;
+  width: 100%;
+}
+.navigation_area li{
+  margin:1vh 0 0 0 ;
+  font-size: larger;
+  color: black;
+  text-align: center;
+  list-style-type: none;
+  
+}
+.navigation_area{
+  
+  display: flex;
+  justify-content: space-around;
+  background-color: #172543;
+  padding: 1vh 0 ;
+}
+.navigation_area a{
+  color: white;
+  text-decoration-line: none;
+}
+.navigation_area a:hover{
+  color: white;
+
+  text-decoration-line: underline;
+  letter-spacing: 0.1px;
+}
+
+.delete2_messsage {
+  width: 700px;
+  margin: 30vh 0 0 0;
+}
+.delete2_messsage h1 {
+  font-size: 80px;
+  text-align: center;
+  color: white;
+
+}
